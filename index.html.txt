@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Ditax Contabilidade - Serviços de contabilidade, consultoria contábil e tributária, gestão empresarial e apoio administrativo em Cristinápolis - Sergipe.">
+
+    <meta name="keywords"
+        content="Ditax Contabilidade, contabilidade Cristinápolis, contador Sergipe, contabilidade empresarial, consultoria tributária">
+
+    <meta name="author" content="Ditax Contabilidade">
+
+    <title>Ditax Contabilidade | Soluções Contábeis</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root {
+            --primary: #0b2545;
+            --primary-light: #123b68;
+            --secondary: #13a673;
+            --secondary-dark: #087a53;
+            --light: #f5f8fb;
+            --dark: #17202a;
+            --text: #5d6875;
+            --white: #ffffff;
+            --border: #e6ebf0;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .navbar {
+            background: rgba(11, 37, 69, 0.97);
+            padding: 15px 0;
+            transition: all .3s ease;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .navbar-brand span {
+            color: #20c997;
+        }
+
+        .navbar .nav-link {
+            color: rgba(255, 255, 255, .85) !important;
+            font-weight: 500;
+            margin-left: 12px;
+            transition: .3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #20c997 !important;
+        }
+
+        .btn-main {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: var(--secondary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(120deg, rgba(7, 29, 55, .97), rgba(11, 60, 83, .90)),
+                radial-gradient(circle at top right, #13a673, transparent 40%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(19, 166, 115, .10);
+            border-radius: 50%;
+            right: -150px;
+            top: -150px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(32, 201, 151, .13);
+            border: 1px solid rgba(32, 201, 151, .3);
+            color: #63e6be;
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 1.05;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #20c997;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.78);
+            font-size: 1.12rem;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-info {
+            margin-top: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,.85);
+        }
+
+        .hero-info-item i {
+            color: #20c997;
+            font-size: 1.25rem;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title .small-title {
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: .82rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title h2 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* CARDS */
+
+        .service-card {
+            height: 100%;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: white;
+            transition: .35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(19,166,115,.05);
+            border-radius: 50%;
+            right: -25px;
+            bottom: -25px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(19,166,115,.35);
+            box-shadow: 0 20px 50px rgba(11,37,69,.09);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(19,166,115,.10);
+            color: var(--secondary);
+            font-size: 1.6rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            margin-bottom: 0;
+            font-size: .94rem;
+        }
+
+        /* ABOUT */
+
+        .about-section {
+            background: var(--light);
+        }
+
+        .about-box {
+            background: white;
+            border-radius: 18px;
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .about-highlight {
+            background: var(--primary);
+            color: white;
+            border-radius: 18px;
+            padding: 40px;
+            height: 100%;
+        }
+
+        .about-highlight h3 {
+            color: white;
+        }
+
+        .about-highlight p {
+            color: rgba(255,255,255,.75);
+            line-height: 1.8;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 0;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: #45515e;
+        }
+
+        .check-list i {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        /* STATS */
+
+        .stats-section {
+            background: white;
+        }
+
+        .stat-card {
+            padding: 30px 20px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-card:last-child {
+            border-right: none;
+        }
+
+        .stat-card i {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .stat-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            margin: 0;
+            font-size: .9rem;
+        }
+
+        /* CNAE */
+
+        .cnae-section {
+            background: var(--light);
+        }
+
+        .cnae-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .cnae-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            transform: translateY(-4px);
+        }
+
+        .cnae-code {
+            display: inline-block;
+            background: rgba(19,166,115,.1);
+            color: var(--secondary-dark);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: .8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cnae-card h5 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .cnae-card p {
+            font-size: .88rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* COMPANY INFO */
+
+        .info-table {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .info-row {
+            display: flex;
+            padding: 17px 22px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            width: 40%;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-value {
+            width: 60%;
+            color: var(--text);
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background:
+                linear-gradient(120deg, #0b2545, #123b68);
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section .section-title p {
+            color: rgba(255,255,255,.7);
+        }
+
+        .contact-card {
+            height: 100%;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
+        }
+
+        .contact-card i {
+            color: #20c997;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h5 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: rgba(255,255,255,.7);
+            text-decoration: none;
+            line-height: 1.7;
+        }
+
+        .contact-card a:hover {
+            color: #20c997;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: var(--secondary);
+            padding: 55px 0;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.8);
+            margin-bottom: 0;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: .3s;
+        }
+
+        .btn-white:hover {
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.12);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #071b31;
+            color: rgba(255,255,255,.65);
+            padding: 55px 0 25px;
+        }
+
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: #20c997;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: .85rem;
+        }
+
+        /* WHATSAPP FLOAT */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            z-index: 999;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            color: white;
+            transform: scale(1.08);
+            background: #1ebe5d;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 991px) {
+
+            .navbar .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons,
+            .hero-info {
+                justify-content: center;
+            }
+
+            .stat-card {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .stat-card:last-child {
+                border-bottom: none;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-box,
+            .about-highlight {
+                padding: 28px;
+            }
+
+            .info-row {
+                display: block;
+            }
+
+            .info-label,
+            .info-value {
+                width: 100%;
+            }
+
+            .info-label {
+                margin-bottom: 5px;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-calculator"></i>
+                Ditax <span>Contabilidade</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empresa">Empresa</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#atividades">Atividades</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-main"
+                            href="https://wa.me/5579996038384"
+                            target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                            Fale Conosco
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero" id="inicio">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-9 hero-content">
+
+                    <span class="badge-custom">
+                        <i class="bi bi-patch-check-fill"></i>
+                        Contabilidade & Consultoria
+                    </span>
+
+                    <h1>
+                        Cuidamos dos números.
+                        <span>Você cuida do seu negócio.</span>
+                    </h1>
+
+                    <p>
+                        Soluções contábeis, tributárias, administrativas e
+                        empresariais para ajudar sua empresa a crescer com
+                        organização, segurança e planejamento.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="https://wa.me/5579996038384"
+                            target="_blank"
+                            class="btn btn-main">
+
+                            <i class="bi bi-whatsapp"></i>
+                            Falar pelo WhatsApp
+
+                        </a>
+
+                        <a href="#servicos"
+                            class="btn btn-outline-light-custom">
+
+                            Conheça nossos serviços
+                            <i class="bi bi-arrow-down ms-2"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+
+                        <div class="hero-info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Cristinápolis - Sergipe</span>
+                        </div>
+
+                        <div class="hero-info-item">
+                            <i class="bi bi-calendar-check"></i>
+                            <span>Desde 2016</span>
+                        </div>
+
+                        <div class="hero-info-item">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Empresa Ativa</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ESTATÍSTICAS -->
+
+    <section class="stats-section py-5">
+
+        <div class="container">
+
+            <div class="row g-0">
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-calendar3"></i>
+                        <h3>2016</h3>
+                        <p>Ano de fundação</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-building"></i>
+                        <h3>ME</h3>
+                        <p>Micro Empresa</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-check-circle"></i>
+                        <h3>Ativa</h3>
+                        <p>Situação cadastral</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <div class="stat-card">
+                        <i class="bi bi-award"></i>
+                        <h3>CRC</h3>
+                        <p>SE-000595/O</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVIÇOS -->
+
+    <section id="servicos">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span class="small-title">O que fazemos</span>
+
+                <h2>Soluções para sua empresa</h2>
+
+                <p>
+                    Serviços pensados para apoiar empresas e profissionais
+                    em suas necessidades contábeis, tributárias,
+                    administrativas e de gestão.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Serviço 1 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+
+                        <h4>Contabilidade</h4>
+
+                        <p>
+                            Organização e acompanhamento das informações
+                            contábeis da empresa, contribuindo para uma
+                            gestão financeira mais organizada.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Serviço 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-receipt"></i>
+                        </div>
+
+                        <h4>Consultoria Tributária</h4>
+
+                        <p>
+                            Apoio relacionado às obrigações e informações
+                            tributárias, buscando organização e
+                            planejamento para o negócio.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Serviço 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+
+                        <h4>Gestão Empresarial</h4>
+
+                        <p>
+                            Consultoria e orientação para empresas que
+                            desejam melhorar seus processos e sua
+                            organização administrativa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Serviço 4 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-folder-check"></i>
+                        </div>
+
+                        <h4>Apoio Administrativo</h4>
+
+                        <p>
+                            Serviços combinados de escritório e apoio
+                            administrativo para facilitar a rotina
+                            empresarial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Serviço 5 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+
+                        <h4>Treinamento em Informática</h4>
+
+                        <p>
+                            Capacitação e treinamento em informática para
+                            desenvolvimento de conhecimentos e habilidades.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Serviço 6 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+
+                        <h4>Treinamentos Profissionais</h4>
+
+                        <p>
+                            Cursos e treinamentos voltados ao desenvolvimento
+                            profissional e gerencial.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="empresa" class="about-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span class="small-title">Sobre a empresa</span>
+
+                <h2>Ditax Contabilidade</h2>
+
+                <p>
+                    Uma empresa estabelecida em Cristinápolis, Sergipe,
+                    com atuação desde 2016.
+                </p>
+
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+
+                <div class="col-lg-7">
+
+                    <div class="about-box h-100">
+
+                        <h3 class="mb-3">
+                            Contabilidade para apoiar suas decisões
+                        </h3>
+
+                        <p>
+                            A <strong>Ditax Contabilidade</strong>,
+                            de razão social <strong>Diogo Luchetta Ronchi</strong>,
+                            foi fundada em 08 de dezembro de 2016 e está
+                            localizada em Cristinápolis, no estado de Sergipe.
+                        </p>
+
+                        <p>
+                            Sua atividade principal é a prestação de
+                            serviços de contabilidade, contando também
+                            com atividades relacionadas à consultoria
+                            empresarial, consultoria e auditoria contábil
+                            e tributária, apoio administrativo e treinamentos.
+                        </p>
+
+                        <ul class="check-list">
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Atividade contábil como atividade principal</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Atuação desde 2016</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Empresa com situação cadastral ativa</span>
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Atendimento em Cristinápolis - SE</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="about-highlight">
+
+                        <i class="bi bi-lightbulb fs-1 text-success"></i>
+
+                        <h3 class="mt-4">
+                            Informação para melhores decisões
+                        </h3>
+
+                        <p>
+                            Uma contabilidade organizada pode fornecer
+                            informações importantes para acompanhar a
+                            situação da empresa e apoiar o planejamento
+                            das atividades empresariais.
+                        </p>
+
+                        <div class="mt-4">
+
+                            <small class="text-white-50">
+                                RAZÃO SOCIAL
+                            </small>
+
+                            <div class="fw-bold text-white">
+                                Diogo Luchetta Ronchi
+                            </div>
+
+                        </div>
+
+                        <div class="mt-3">
+
+                            <small class="text-white-50">
+                                NOME FANTASIA
+                            </small>
+
+                            <div class="fw-bold text-white">
+                                Ditax Contabilidade
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATIVIDADES / CNAES -->
+
+    <section id="atividades" class="cnae-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span class="small-title">Atividades</span>
+
+                <h2>Atividades da empresa</h2>
+
+                <p>
+                    Conheça as atividades econômicas informadas para a
+                    Ditax Contabilidade.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- PRINCIPAL -->
+
+                <div class="col-lg-6">
+
+                    <div class="cnae-card border-success">
+
+                        <span class="cnae-code">
+                            ATIVIDADE PRINCIPAL
+                        </span>
+
+                        <h5>
+                            69.20-6-01
+                        </h5>
+
+                        <p>
+                            Atividades de contabilidade
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SECUNDÁRIA -->
+
+                <div class="col-lg-6">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            ATIVIDADE SECUNDÁRIA
+                        </span>
+
+                        <h5>
+                            85.99-6-04
+                        </h5>
+
+                        <p>
+                            Treinamento em desenvolvimento profissional e gerencial
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            CNAE 70.20-4-00
+                        </span>
+
+                        <h5>
+                            Consultoria em gestão empresarial
+                        </h5>
+
+                        <p>
+                            Atividades de consultoria em gestão empresarial,
+                            exceto consultoria técnica específica.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            CNAE 82.11-3-00
+                        </span>
+
+                        <h5>
+                            Apoio administrativo
+                        </h5>
+
+                        <p>
+                            Serviços combinados de escritório e apoio administrativo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            CNAE 85.99-6-03
+                        </span>
+
+                        <h5>
+                            Treinamento em informática
+                        </h5>
+
+                        <p>
+                            Atividades relacionadas à capacitação em informática.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            CNAE 85.99-6-05
+                        </span>
+
+                        <h5>
+                            Cursos preparatórios
+                        </h5>
+
+                        <p>
+                            Cursos preparatórios para concursos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mx-md-auto">
+
+                    <div class="cnae-card">
+
+                        <span class="cnae-code">
+                            CNAE 69.20-6-02
+                        </span>
+
+                        <h5>
+                            Consultoria e auditoria contábil e tributária
+                        </h5>
+
+                        <p>
+                            Atividades de consultoria e auditoria contábil
+                            e tributária.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DADOS CADASTRAIS -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span class="small-title">Informações</span>
+
+                <h2>Dados cadastrais</h2>
+
+                <p>
+                    Informações de registro fornecidas para identificação
+                    da empresa.
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <div class="info-table">
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                <i class="bi bi-card-text me-2"></i>
+                                CNPJ
+                            </div>
+
+                            <div class="info-value">
+                                26.680.128/0001-37
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Razão Social
+                            </div>
+
+                            <div class="info-value">
+                                Diogo Luchetta Ronchi
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Nome Fantasia
+                            </div>
+
+                            <div class="info-value">
+                                Ditax Contabilidade
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Data de Abertura
+                            </div>
+
+                            <div class="info-value">
+                                08/12/2016
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Porte
+                            </div>
+
+                            <div class="info-value">
+                                Micro Empresa
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Natureza Jurídica
+                            </div>
+
+                            <div class="info-value">
+                                Empresário (Individual)
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Regime Tributário
+                            </div>
+
+                            <div class="info-value">
+                                Simples Nacional
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Capital Social
+                            </div>
+
+                            <div class="info-value">
+                                R$ 500,00
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Tipo
+                            </div>
+
+                            <div class="info-value">
+                                Matriz
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Situação
+                            </div>
+
+                            <div class="info-value">
+                                <span class="badge bg-success">
+                                    Ativa
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                CRC
+                            </div>
+
+                            <div class="info-value">
+                                SE-000595/O
+                            </div>
+
+                        </div>
+
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                Data da Situação Cadastral
+                            </div>
+
+                            <div class="info-value">
+                                08/12/2016
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2>
+                        Precisa de atendimento contábil?
+                    </h2>
+
+                    <p>
+                        Entre em contato com a Ditax Contabilidade
+                        e conheça nossas soluções.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                    <a href="https://wa.me/5579996038384"
+                        target="_blank"
+                        class="btn-white">
+
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Falar no WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="contact-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span class="small-title">
+                    Entre em contato
+                </span>
+
+                <h2>
+                    Estamos à disposição
+                </h2>
+
+                <p>
+                    Utilize um dos canais abaixo para falar com a
+                    Ditax Contabilidade.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Telefone -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="contact-card">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <h5>Telefone</h5>
+
+                        <a href="tel:+5579996038384">
+                            (79) 99603-8384
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- WhatsApp -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="contact-card">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        <h5>WhatsApp</h5>
+
+                        <a href="https://wa.me/5579996038384"
+                            target="_blank">
+
+                            Iniciar conversa
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="contact-card">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <h5>E-mail</h5>
+
+                        <a href="mailto:brahimivullnetml@gmail.com">
+
+                            brahimivullnetml@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Endereço -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="contact-card">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <h5>Endereço</h5>
+
+                        <p>
+                            Rua Alvaro Cavalcante Mota, 65<br>
+                            Centro<br>
+                            Cristinápolis - SE<br>
+                            CEP 49270-000
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5">
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Alvaro%20Cavalcante%20Mota%2C%2065%2C%20Centro%2C%20Cristin%C3%A1polis%20SE%2C%2049270-000"
+                    target="_blank"
+                    class="btn btn-main">
+
+                    <i class="bi bi-map me-2"></i>
+                    Procurar no Google Maps
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <h5>
+                        <i class="bi bi-calculator"></i>
+                        Ditax Contabilidade
+                    </h5>
+
+                    <p>
+                        Soluções contábeis, tributárias,
+                        administrativas e empresariais em
+                        Cristinápolis - Sergipe.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Navegação</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a href="#inicio">Início</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#servicos">Serviços</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#empresa">Empresa</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#atividades">Atividades</a>
+                        </li>
+
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Informações</h5>
+
+                    <p class="mb-2">
+                        <i class="bi bi-building me-2"></i>
+                        CNPJ: 26.680.128/0001-37
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Cristinápolis - Sergipe
+                    </p>
+
+                    <p>
+                        <i class="bi bi-award me-2"></i>
+                        CRC: SE-000595/O
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom text-center">
+
+                <p class="mb-0">
+                    © 2026 Ditax Contabilidade.
+                    Todos os direitos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+
+    <a href="https://wa.me/5579996038384"
+        target="_blank"
+        class="whatsapp-float"
+        aria-label="Falar com a Ditax Contabilidade pelo WhatsApp">
+
+        <i class="bi bi-whatsapp"></i>
+
+    </a>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Fecha o menu mobile ao clicar em um link -->
+
+    <script>
+
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+
+            link.addEventListener('click', function() {
+
+                const menu = document.querySelector('.navbar-collapse');
+
+                if (menu.classList.contains('show')) {
+
+                    const bsCollapse =
+                        bootstrap.Collapse.getInstance(menu);
+
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
